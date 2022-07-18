@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic import</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container {
+            margin: 20px 0;
+            padding: 10px;
+            width: 30vw;
+            min-height: 20vh;
+            display: grid;
+            place-items: center;
+            border: 1px solid black;
+            border-radius: 8px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.486);
+        }
+
+        .options {
+            grid-template-columns: 1fr;
+            grid-template-rows: 3fr 2fr;
+        }
+
+        .respuesta {
+            display: grid;
+            place-items: center;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            border-radius: 8px;
+            width: 90%;
+            min-height: 80%;
+        }
+
+        .response {
+            padding: 5px;
+        }
+
+        h2 {
+            margin: 10px 0;
+        }
+
+        #btn {
+            padding: 5px 15px;
+            border-radius: 8px;
+            background: rgb(206, 136, 5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="respuesta"></div>
+    </div>
+    <div class="container options">
+        <h2>Dynamic import</h2>
+        <button id="btn">File</button>
+    </div>
+    <script src="./index.js" type="module"></script>
+</body>
+
+</html>
